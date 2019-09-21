@@ -1,7 +1,7 @@
-## Contrast Ratio for Gmod
+## Contrast Ratio for Garry's mod
 
 This module produces [WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
-measurement and scoring.
+measurement and scoring. For Garry's mod(Gmod)
 
 ## API
 
