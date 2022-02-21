@@ -1,49 +1,61 @@
 ## Contrast Ratio for Garry's mod
 
 This module produces [WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
-measurement and scoring. For Garry's mod(Gmod)
+measurement and scoring.
 
 ## API
 
-### luminance
+### COLOR:GetLuminance()
 
-Get the contrast ratio between two relative luminance values
+Get cached calculated the contrast ratio
 
-**Parameters**
+Returns **[float](https://wiki.facepunch.com/gmod/number)** contrast ratio
 
--   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** luminance value
--   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** luminance value
+### COLOR:CalcLuminance()
 
-Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** contrast ratio
+Get calculated the contrast ratio
 
-### rgb
+Returns **[float](https://wiki.facepunch.com/gmod/number)** contrast ratio
 
-Get a score for the contrast between two colors as rgb triplets
+### util.ContrastRatio
 
-**Parameters**
-
--   `a` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
--   `b` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
-
-Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** contrast ratio
-
-### hex
-
-Get a score for the contrast between two colors as hex strings
+Get a score for the contrast between two colors
 
 **Parameters**
 
--   `a` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** hex value
--   `b` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** hex value
+-	`cSrc`		**[color](https://wiki.facepunch.com/gmod/Color)** 
+-	`cDst`		**[color](https://wiki.facepunch.com/gmod/Color)** 
 
-Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** contrast ratio
+Returns **[float](https://wiki.facepunch.com/gmod/number)** contrast ratio
 
-### score
+### util.ContrastRatioLevel
+
+Get a level of the contrast between two colors
+
+-   `cSrc`		**[color](https://wiki.facepunch.com/gmod/Color)** 
+-	`cDst`		**[color](https://wiki.facepunch.com/gmod/Color)** 
+
+Returns **[number](https://wiki.facepunch.com/gmod/number)** level contrast ratio
+
+### util.ContrastRatioRate
 
 Get a textual score from a numeric contrast value
 
 **Parameters**
 
--   `contrast` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-	`cSrc`		**[color](https://wiki.facepunch.com/gmod/Color)** 
+-	`cDst`		**[color](https://wiki.facepunch.com/gmod/Color)** 
 
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** score
+Returns **[string](https://wiki.facepunch.com/gmod/string)** score
+
+### util.ContrastColor
+
+Get a contrast color for first argument
+
+**Parameters**
+
+-	`cSrc`		**[color](https://wiki.facepunch.com/gmod/Color)** 
+-	`cDst`		**[color](https://wiki.facepunch.com/gmod/Color)** 
+-	`cDstAlt`	**[color](https://wiki.facepunch.com/gmod/Color)** 
+
+Returns **[color](https://wiki.facepunch.com/gmod/Color)** contrast
