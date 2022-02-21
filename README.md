@@ -5,13 +5,13 @@ measurement and scoring.
 
 ## API
 
-### COLOR:GetLuminance()
+### **[COLOR](https://wiki.facepunch.com/gmod/Color)**:GetLuminance()
 
 Get cached calculated the contrast ratio
 
 Returns **[float](https://wiki.facepunch.com/gmod/number)** contrast ratio
 
-### COLOR:CalcLuminance()
+### **[COLOR](https://wiki.facepunch.com/gmod/Color)**:CalcLuminance()
 
 Get calculated the contrast ratio
 
